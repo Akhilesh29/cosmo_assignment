@@ -20,3 +20,6 @@ app.add_middleware(
 app.include_router(student.router, tags=['Students'], prefix='/api/students')
 
 
+@app.get('/')
+def healthcheck():
+    return {"status": "ok"}
